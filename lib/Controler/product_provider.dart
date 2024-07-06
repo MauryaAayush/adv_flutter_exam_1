@@ -8,7 +8,8 @@ class ProductProvider extends ChangeNotifier{
 
   Map finaldata = {};
   bool isLoading = false;
-  List<ProductModel> dataValue =[];
+  // Map dataValue = {}
+  ProductModel? productModel;
 
   Future<void> getValue() async {
     isLoading = true;
@@ -20,14 +21,15 @@ class ProductProvider extends ChangeNotifier{
     print(finaldata);
 
     // dataValue = finaldata.map((e) => ProductModel.fromJson(e)).toMap();
-    // dataValue = finaldata.map((e) => <ProductModel>.fromJson(e)).toList();
+    productModel = ProductModel.fromJson(finaldata);
     notifyListeners();
 
     isLoading = false;
     notifyListeners();
   }
 
-  ProductProvider(){
-    getValue();
-  }
+ ProductProvider()
+ {
+   getValue();
+ }
 }

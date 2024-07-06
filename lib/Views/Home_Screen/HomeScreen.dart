@@ -18,16 +18,16 @@ class Homescreen extends StatelessWidget {
         builder: (context, value, child) {
           if (value.isLoading) {
             return Center(
-              child: Text('No Any News Here'),
+              child: CircularProgressIndicator(),
             );
           } else {
             return ListView.builder(
-              itemCount: value.dataValue.length,
+              itemCount: value.productModel!.product!.length,
               itemBuilder: (context, index) {
                 return ListTile(
                     leading: Text('${index + 1}'),
                     title: Center(
-                      child: Text(value.dataValue[index].product!.title!),
+                      child: Text(value.productModel!.product![index].title!),
                     )
                 );
               },);

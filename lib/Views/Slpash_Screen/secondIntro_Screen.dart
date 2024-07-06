@@ -1,8 +1,8 @@
-import 'package:adv_flutter_exam_1/Views/Slpash_Screen/secondIntro_Screen.dart';
+import 'package:adv_flutter_exam_1/Views/Slpash_Screen/thridintro_Screen.dart';
 import 'package:flutter/material.dart';
 
-class IntroScreen extends StatelessWidget {
-  const IntroScreen({super.key});
+class SecondIntroScreen extends StatelessWidget {
+  const SecondIntroScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class IntroScreen extends StatelessWidget {
             width: double.infinity,
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/Bg(2).png'), fit: BoxFit.cover)),
+                    image: AssetImage('assets/Bg.png'), fit: BoxFit.cover)),
           ),
           Positioned(
             left: 20,
@@ -24,7 +24,7 @@ class IntroScreen extends StatelessWidget {
                 Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const SecondIntroScreen(),
+                      builder: (context) => const ThirdIntroScreen(),
                     ));
               },
               child: Container(

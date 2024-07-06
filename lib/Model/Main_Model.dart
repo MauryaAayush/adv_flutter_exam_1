@@ -1,15 +1,15 @@
 
 class ProductModel {
-  Product? product;
+  List<Product>? product;
   int? total,skip,limit;
 
-  ProductModel({this.product, this.limit,this.skip,this.total});
+  ProductModel({this.limit,this.skip,this.total,this.product});
 
   factory ProductModel.fromJson(Map json)
   {
    return ProductModel(
      limit: json['limit'],
-     product: json['product'],
+     product: (json['product'] as List).map((e) => Product.fromJson(e)).toList(),
      skip: json['skip'],
      total: json['total']
    );
