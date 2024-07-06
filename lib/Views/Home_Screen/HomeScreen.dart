@@ -105,7 +105,8 @@ class Homescreen extends StatelessWidget {
                       );
                     }).toList(),
                     options: CarouselOptions(
-                      height: 150,
+                      height: 200,
+
                       aspectRatio: 16 / 9,
                       viewportFraction: 0.8,
                       initialPage: 0,
@@ -118,6 +119,9 @@ class Homescreen extends StatelessWidget {
                       enlargeCenterPage: true,
                       scrollDirection: Axis.horizontal,
                     ),
+                  ),
+                  SizedBox(
+                    height: 20,
                   ),
                   Expanded(
                     child: ListView.builder(
