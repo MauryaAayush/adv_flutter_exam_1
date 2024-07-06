@@ -1,16 +1,33 @@
-# adv_flutter_exam_1
+# Advance Flutter Exam
 
-A new Flutter project.
+## Introduction
+An e-commerce app is a digital platform that allows users to buy and sell products or services online. These apps are designed to facilitate seamless transactions between buyers and sellers by providing a convenient and secure shopping experience. Key features typically include product catalogs, shopping carts, customer support.
 
-## Getting Started
+### 
+<h3 align="center"><i>Images</i></h3>
 
-This project is a starting point for a Flutter application.
+###
 
-A few resources to get you started if this is your first Flutter project:
+<div align="center">
+  
+<img src="https://github.com/MauryaAayush/adv_flutter_exam_1/assets/143180849/ff524d87-4b65-47b1-9211-e7939aec0161" height=500px hspace=20>
+<img src="https://github.com/MauryaAayush/adv_flutter_exam_1/assets/143180849/5455d7c8-0e0a-400a-bf46-bc37fe325d92" height=500px hspace=20>
+<img src="https://github.com/MauryaAayush/adv_flutter_exam_1/assets/143180849/5009400d-6bb2-4d7e-8d39-32e73ade744c" height=500px hspace=20>
+<img src="https://github.com/MauryaAayush/adv_flutter_exam_1/assets/143180849/69cc3681-b9cd-4cf7-bd3d-80f7be784871" height=500px hspace=20>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+</div>
+
+
+###
+<h3 align="center"><i>Video</i></h3>
+<div align="center">    
+<video src = "https://github.com/MauryaAayush/adv_flutter_exam_1/assets/143180849/84bab520-06af-43d3-884f-b25def03d3aa">
+
+</div>
+
+###
+<div align="center">
+<a href="[https://github.com/MauryaAayush/sky_scrapper](https://github.com/MauryaAayush/adv_flutter_exam_1)">-> 👉📚 See The Code 📚 👈<-</a>
+</div>
