@@ -9,7 +9,7 @@ class ProductModel {
   {
    return ProductModel(
      limit: json['limit'],
-     product: (json['product'] as List).map((e) => Product.fromJson(e)).toList(),
+     product: json['products'].map<Product>((e) => Product.fromJson(e)).toList(),
      skip: json['skip'],
      total: json['total']
    );
@@ -24,7 +24,7 @@ class Product {
   String? returnPolicy,thumbnail;
 
   List? images;
-  Reviews? reviews;
+  List<Reviews?> reviews;
 
   Product(
       {this.id,
@@ -40,7 +40,9 @@ class Product {
       this.returnPolicy,
       this.thumbnail,
       this.images,
-      this.reviews});
+      required this.reviews
+
+      });
 
   factory Product.fromJson(Map json){
     return Product(
@@ -49,15 +51,19 @@ class Product {
       id: json['id'],
       category: json['category'],
       availabilityStatus: json['availabilityStatus'],
-      brand: json['brand'],
-      images: json['images'],
+      brand: json['brand'] ?? "No Brands",
+      images: json['images'] , // .map ((e)=> Product.fromJson(e)).toList(),
       minimumOrderQuantity: json['minimumOrderQuantity'],
       returnPolicy: json['returnPolicy'],
-      reviews: json['reviews'],
+      reviews: json['reviews'].map<Reviews>((e)=> Reviews.fromJson(e)).toList(),
       shippingInformation: json['shippingInformation'],
       stock: json['stock'],
       thumbnail: json['thumbnail'],
       warrantyInformation: json['warrantyInformation'],
+
+
+      // json['products'].map<Product>((e) => Product.fromJson(e)).toList(),
+
     );
   }
 }
@@ -76,11 +82,11 @@ class Reviews {
 
   factory Reviews.fromJson(Map json){
     return Reviews(
-      comments: json['comments'],
-      date: json['date'],
-      rating: json['rating'],
-      reviewerEmail: json['reviewerEmail'],
-      reviewerName: json['reviewerName']
+      comments: json['comment'] ?? "No comments",
+      date: json['date'] ?? "No Dates",
+      rating: json['rating'] ?? "No Rating",
+      reviewerEmail: json['reviewerEmail'] ?? "No Email",
+      reviewerName: json['reviewerName'] ?? "No Name"
     );
 
   }

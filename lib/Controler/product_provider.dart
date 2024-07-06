@@ -18,9 +18,7 @@ class ProductProvider extends ChangeNotifier{
     print('Provider called');
     finaldata = await ProductApi.productApi.apiCalling();
 
-    print(finaldata);
 
-    // dataValue = finaldata.map((e) => ProductModel.fromJson(e)).toMap();
     productModel = ProductModel.fromJson(finaldata);
     notifyListeners();
 
