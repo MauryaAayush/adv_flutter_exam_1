@@ -14,6 +14,7 @@ class ProductModel {
      total: json['total']
    );
   }
+
 }
 
 

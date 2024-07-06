@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'Views/Home_Screen/HomeScreen.dart';
+import 'Views/Slpash_Screen/splash_Screen.dart';
 
 void main() {
   runApp(MultiProvider(
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: Homescreen(),
+      home: SplashScreen(),
     );
   }
 }

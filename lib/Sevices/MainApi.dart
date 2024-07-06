@@ -1,29 +1,28 @@
 
-import 'dart:nativewrappers/_internal/vm/lib/convert_patch.dart';
-
+import 'dart:convert';
 import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
 
 class ProductApi{
 
-  static late ProductApi productApi = ProductApi();
+  static final ProductApi productApi = ProductApi();
 
-  Future<String?> apiCalling()
+  Future<Map> apiCalling()
   async {
     String link = 'https://dummyjson.com/products';
-    Uri uri = Uri.http(link);
-    Response response = await http.get(uri);
+    Uri url = Uri.parse(link);
+    Response response = await http.get(url);
 
     print('--------------------------process done-----------------------');
 
     if(response.statusCode == 200){
-      print(response.body);
-      // String result = JsonDecoder(response.body);
 
-      return response.body;
+      Map result = jsonDecode(response.body);
+      print('------------------------done------------------------');
+      return result;
     }
     else{
-      return null;
+      throw "Error in the API";
     }
 
   }
